@@ -15,22 +15,26 @@ Use this control to add fontawesome control in your customizer settings. By defa
 ## Example Code ##
 
 ````
-Kirki::add_field( 'bizberg', array(
-    'type'              => 'font-awesome-6',
-    'label'             => 'Icon',
-    'section'           => 'detail_page',
-    'settings'          => 'icon',
-    'priority'          => 1,
-    'choices' => array(
-        'height'       => '200px',
-        'search_icons' => true
-    ),
-    'default' => json_encode(
-        array(
-            'icon' => 'fas fa-ad',				
-        )
-    ) 
-) );
+add_action( 'init' , function(){
+	
+	Kirki::add_field( 'bizberg', array(
+		'type'              => 'font-awesome-6',
+		'label'             => 'Icon',
+		'section'           => 'detail_page',
+		'settings'          => 'icon',
+		'priority'          => 1,
+		'choices' => array(
+			'height'       => '200px',
+			'search_icons' => true
+		),
+		'default' => json_encode(
+			array(
+				'icon' => 'fa-solid fa-1',				
+			)
+		) 
+	) );
+	
+});
 ````
 
 ## How to get icons in frontend ? ##
