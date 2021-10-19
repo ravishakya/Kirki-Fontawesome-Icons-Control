@@ -32,6 +32,14 @@ Kirki::add_field( 'bizberg', array(
     ) 
 ) );
 ````
+
+## How to get icons in frontend ? ##
+````
+$icon = get_theme_mod( 'icon' );
+$icon_array = json_decode( $icon, true );
+echo esc_attr( $icon_array['icon'] );
+````
+
 In the above control you can control the height and search icons
 
 **Parameters**  
