@@ -60,3 +60,10 @@ Kirki::add_field( 'bizberg', array(
     -----------------------------
 ) );
 ````
+## Note ##
+You will need to install the kirki plugin first https://wordpress.org/plugins/kirki/
+
+## Changelog ##
+
+= 0.1 =
+- Initial Release
