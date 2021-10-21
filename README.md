@@ -38,7 +38,7 @@ add_action( 'init' , function(){
 ````
 
 ## How to get icons in frontend ? ##
-````
+````php
 $icon = get_theme_mod( 'icon' );
 $icon_array = json_decode( $icon, true );
 echo esc_attr( $icon_array['icon'] );
@@ -47,7 +47,7 @@ echo esc_attr( $icon_array['icon'] );
 In the above control you can control the height and search icons
 
 **Parameters**  
-````
+````php
 Kirki::add_field( 'bizberg', array(
     -----------------------------
     'choices' => array(
@@ -61,7 +61,7 @@ Kirki::add_field( 'bizberg', array(
 
 **search_icons** - (boolean) (optional) If true, it will show a text box to search for icons. **Default : false**
 
-````
+````php
 Kirki::add_field( 'bizberg', array(
     -----------------------------
     'default' => json_encode(
@@ -78,7 +78,7 @@ You will need to install the kirki plugin first https://wordpress.org/plugins/ki
 # How to use Fontawesome 4 icons ?
 By default the plugin will take fontawesome 6 icons. But you can replace that with fontawesome 4 icons. Put the below code in your functions.php file.
 
-````
+````php
 add_filter( 'ravi_fontawesome_css_link', function(){
 	return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.css';
 });
@@ -91,7 +91,7 @@ add_filter( 'ravi_font_awesome_6_icons', function(){
 # How to use Fontawesome 5 icons ?
 By default the plugin will take fontawesome 6 icons. But you can replace that with fontawesome 5 icons. Put the below code in your functions.php file.
 
-````
+````php
 add_filter( 'ravi_fontawesome_css_link', function(){
 	return 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css';
 });
