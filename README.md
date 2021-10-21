@@ -14,7 +14,7 @@ Use this control to add fontawesome control in your customizer settings. By defa
 
 ## Example Code ##
 
-````
+````php
 add_action( 'init' , function(){
 	
 	Kirki::add_field( 'bizberg', array(
