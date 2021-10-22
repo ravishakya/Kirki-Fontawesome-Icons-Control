@@ -3,7 +3,10 @@
 /**
 * Plugin Name: Kirki Fontawesome 6 Icons Control
 * Author: Ravi Shakya
-* Version: 0.1
+* Version: 0.2
+* Requires WP: 4.9
+* Requires PHP: 5.6
+* Description: Use this control to add fontawesome control in your customizer settings. By default it uses fontawesome 6 icons.
 */
 
 add_action( 'init', function(){
@@ -14,6 +17,7 @@ add_action( 'init', function(){
 			return $controls;
 
 		}
+		
 	);
 
 });
@@ -59,6 +63,9 @@ function ravi_customize_register(){
 			<div class="ravi-font-awesome-6-wrap">
 
 				<span class="customize-control-title"><?php echo esc_html( $this->label ); ?></span>
+				<span class="description customize-control-description">
+					<?php echo esc_html( $this->description ); ?>
+				</span>
 
 				<?php
 				if( $search_icons ){ ?>
