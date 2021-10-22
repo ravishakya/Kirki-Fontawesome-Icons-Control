@@ -4,7 +4,7 @@
 **Author URI:** https://bizbergthemes.com  
 **License:** GNU General Public License v2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
-**Version:** 0.1
+**Version:** 0.2
 
 ## Description ##
 
@@ -101,6 +101,9 @@ add_filter( 'ravi_font_awesome_6_icons', function(){
 ````
 
 ## Changelog ##
+
+= 0.2 =
+- Added description field
 
 = 0.1 =
 - Initial Release
