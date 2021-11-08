@@ -1,7 +1,3 @@
-jQuery(document).ready(function(){
-
-});
-
 jQuery(document).on( 'click', '.ravi-font-awesome-6-wrap a', function() {
 
     // Add / remove class
@@ -9,12 +5,8 @@ jQuery(document).on( 'click', '.ravi-font-awesome-6-wrap a', function() {
     jQuery(this).addClass( 'active' );
 
     var save_db = jQuery(this).closest('.ravi-font-awesome-6-wrap').find('.ravi-font-awesome-6-db'),
-    dbstore = save_db.val(),
-    new_value = jQuery(this).find('i').attr('class');
-
-    dbstore = dbstore === '' ? {} : JSON.parse(dbstore);
-    dbstore['icon'] = new_value;
-    save_db.val(JSON.stringify(dbstore)).change();
+    new_value   = jQuery(this).find('i').attr('class');
+    save_db.val( new_value ).change();
 
 });
 
