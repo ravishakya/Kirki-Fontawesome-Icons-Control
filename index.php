@@ -3,14 +3,17 @@
 /**
 * Plugin Name: Kirki Fontawesome 6 Icons Control
 * Author: Ravi Shakya
-* Version: 0.3
+* Version: 0.4
 * Requires WP: 4.9
 * Requires PHP: 5.6
 * Description: Use this control to add fontawesome control in your customizer settings. By default it uses fontawesome 6 icons.
 */
 
 if( !defined( "BIZBERG_KFIC_PLUGIN_DIR_URL" ) ){
-	define( "BIZBERG_KFIC_PLUGIN_DIR_URL", plugin_dir_url( __FILE__ ) );
+	$KFIC_content_url  = untrailingslashit( dirname( dirname( get_stylesheet_directory_uri() ) ) );
+	$KFIC_content_dir  = wp_normalize_path( untrailingslashit( WP_CONTENT_DIR ) );
+	$KFIC_absolute_url = str_replace( $KFIC_content_dir, $KFIC_content_url, wp_normalize_path( dirname( __FILE__ ) ) ); 
+	define( "BIZBERG_KFIC_PLUGIN_DIR_URL", set_url_scheme( $KFIC_absolute_url ) );
 }
 
 add_action( 'init' , 'bizberg_kfic_register_fontawesome_control' );
@@ -41,19 +44,19 @@ if( !function_exists( 'bizberg_kfic_customize_register' ) ){
 			public function enqueue() {
 				wp_enqueue_script( 
 					'bizberg-kfic-font-awesome-6-custom-js', 
-					BIZBERG_KFIC_PLUGIN_DIR_URL . 'js/scripts.js', 
+					BIZBERG_KFIC_PLUGIN_DIR_URL . '/js/scripts.js', 
 					array( 'jquery' )
 				);
 				wp_enqueue_style( 
 					'bizberg-kfic-font-awesome-6', 
 					apply_filters( 
 						'bizberg_fontawesome_css_link', 
-						BIZBERG_KFIC_PLUGIN_DIR_URL . 'fontawesome/css/all.min.css' 
+						BIZBERG_KFIC_PLUGIN_DIR_URL . '/fontawesome/css/all.min.css' 
 					)
 				);
 				wp_enqueue_style( 
 					'bizberg-kfic-font-awesome-css', 
-					BIZBERG_KFIC_PLUGIN_DIR_URL . 'css/style.css' 
+					BIZBERG_KFIC_PLUGIN_DIR_URL . '/css/style.css' 
 				);
 			}
 
