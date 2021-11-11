@@ -4,7 +4,7 @@
 **Author URI:** https://bizbergthemes.com  
 **License:** GNU General Public License v2 or later  
 **License URI:** http://www.gnu.org/licenses/gpl-2.0.html  
-**Version:** 0.3
+**Version:** 0.4
 
 ## Description ##
 
@@ -85,6 +85,9 @@ add_filter( 'bizberg_font_awesome_6_icons', function(){
 ````
 
 ## Changelog ##
+
+= 0.4 =
+- Fixed absolute url
 
 = 0.3 =
 - Saved value in string
